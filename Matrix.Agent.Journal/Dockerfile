@@ -14,7 +14,7 @@ COPY Matrix.Agent.Journal.Model/Matrix.Agent.Journal.Model.csproj Matrix.Agent.J
 COPY . .
 
 # restore
-RUN dotnet restore "Matrix.Agent.Journal/Matrix.Agent.Journal.csproj"
+RUN dotnet restore "Matrix.Agent.Journal/Matrix.Agent.Journal.csproj" -s http://nuget.matrix.paramg.com:8888/v3/index.json
 
 # build
 WORKDIR /src/Matrix.Agent.Journal
